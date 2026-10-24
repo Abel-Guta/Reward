@@ -1,0 +1,46 @@
+@import url('https://googleapis.com')
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+    font-family: 'Space Mono', monospace;
+    font-weight:700;
+    font-size:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    background-color:hsl(185, 41%, 84%);
+    height:100vh;
+}
+
+.outer{
+    width:60%;
+    height:70%;
+    display:flex;
+    justify-content:center;
+    background-color:hsl(0, 100%, 100%);
+    border-radius:20px;
+    padding:40px
+
+}
+.outer .calculator{
+    width:35%;
+    
+   border-radius:20px;
+    background-color:hsl(0, 100%, 100%)
+
+}
+.outer .calcresult{
+     width:35%;
+   margin-top:-10px;
+    background-color:hsl(183, 100%, 15%);
+    border-radius:20px;
+}
