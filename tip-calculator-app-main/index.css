@@ -7,7 +7,25 @@
   margin: 0;
   padding: 0;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.notf{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.notf .error{
+    color:transparent;
+    font-size:12px;
 
+
+}
+.notf .active{
+    color:red
+}
 
 body{
     font-family: 'Space Mono', monospace;
@@ -22,14 +40,20 @@ body{
 }
 
 .outer{
-    width:60%;
-    height:70%;
+    width:50%;
+    height:45%;
     display:flex;
     justify-content:center;
     background-color:hsl(0, 100%, 100%);
     border-radius:20px;
-    padding:40px
+    padding:40px;
+    gap:40px;
 
+
+}
+.outer h3{
+    font-size:1.3rem;
+    color:hsl(184, 14%, 56%);
 }
 .outer .calculator{
     width:35%;
@@ -38,9 +62,132 @@ body{
     background-color:hsl(0, 100%, 100%)
 
 }
+.outer .calculator .input{
+
+    background:hsl(185, 41%, 84%);
+    border-radius:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:5px ;
+    padding:10px;
+    padding-right:30px;
+    
+}
+.outer .calculator .input input{
+    background:transparent;
+    border:none;
+    min-width:100%;
+    height:1.3rem;
+    text-align:right;
+    font-size:24px;
+    
+}
+.outer .calculator .input input:focus-visible{
+  outline: none;                 
+  border-color: transparent;    
+  box-shadow: none;
+}
+
+
+.outer .calculator .tip .options{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    gap:10px
+}
+
+
+.outer .calculator .tip .options .chooser{
+    background-color:hsl(183, 100%, 15%);
+    color:hsl(0, 100%, 100%);
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:2.5rem;
+    border:none
+}
+.outer .calculator .tip .options  .light{
+    background:hsl(172, 67%, 45%)
+}
+.outer .calculator .tip .options .custom{
+    background:hsl(185, 41%, 84%);
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:2.5rem;
+    border:none;
+    
+}
+
+.outer .calculator .tip .options .custom input{
+    max-width: 4rem;
+    background:transparent;
+    border:none;
+    font-size:16px
+
+}
+.outer .calculator .tip .options .custom input:focus-visible{
+   outline: none;              
+  border-color: transparent;    
+  box-shadow: none;
+}
 .outer .calcresult{
-     width:35%;
+    width:35%;
    margin-top:-10px;
     background-color:hsl(183, 100%, 15%);
     border-radius:20px;
+    height:85%;
+    padding:20px;
 }
+
+.outer .calcresult{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding-top:50px;
+
+}
+
+.outer .calcresult .upper div{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.outer .calcresult .upper .tipAmount{
+    margin-bottom:20px;
+}
+
+.outer .calcresult .upper   p{
+    font-size:36px;
+    color:hsl(172, 67%, 45%);
+    margin-top:-1px;
+}
+.outer .calcresult .upper .left{
+    display:flex;
+    flex-direction:column;
+    max-height:3rem;
+    color:hsl(0, 100%, 100%);
+    
+}
+.outer .calcresult .upper .left span{
+    font-size:16px;
+    color:hsl(186, 14%, 43%);
+
+}
+.outer .calcresult .upper  h4{
+    margin:0;
+    font-size:24px;
+  
+
+}
+
+#reset{
+    background:hsl(172, 67%, 45%);
+    height:2rem;
+    border:none;
+    margin-top:-10px
+}
+

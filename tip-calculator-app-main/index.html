@@ -8,8 +8,9 @@
   <link  rel="stylesheet" href="./index.css">
   
   <title>Tip calculator app</title>
+  <script src="index.js" defer></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
   <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -23,7 +24,7 @@
         <h3>Bill</h3>
         <div class="input">
           <img src="./images/icon-dollar.svg"/>
-          <input type="number" placeholder="0"/>
+          <input id="inputMoney" type="number" placeholder="0"/>
         </div>
         
       </div>
@@ -32,42 +33,52 @@
         <h3>
   Select Tip %</h3>
 
-        <div class="options">  <div class="chooser">
-          <p>5%</p>
-        </div><div class="chooser"> <p>10%</p></div>
-        <div class="chooser"> <p>15%</p></div>
-        <div class="chooser"> <p>25%</p></div>
-        <div class="chooser"> <p>50%</p></div>
-        <div class="chooser"> <input class="custom" placeholder="Custom"/></div>
+        <div class="options">  <button class="chooser" data-value="5">
+          5%
+        </button><button class="chooser" data-value="10"> 10%</button>
+        <button class="chooser" data-value="15"> 15%</button>
+        <button class="chooser" data-value="25"> 25%</button>
+        <button class="chooser " data-value="50"> 50%</button>
+        <div class="custom"> <input id="inputcustomTip" class="custom" placeholder="Custom"/></div>
       </div></div>
        
       <div class="people">
-        <h3> Number of People</h3>
+        <div class="notf"><h3> Number of People</h3>
+          <h3 class="error" id="error">Can't be zero</h3>
+        </div>
+        
          <div class="input">
           <img src="./images/icon-person.svg"/>
-          <input type="number" placeholder="0"/>
+          <input id="inputPeople" type="number" placeholder="0"/>
         </div>
       </div>
 
     </div>
     <div class="calcresult">
-      <div class="tipAmount">
-        <p>
+       <div class="upper"> <div class="tipAmount">
+       
+       <div class="left">
            <h4> Tip Amount</h4>
-           <span>  / person</span>
-           </p>
+           <span>  /person</span>
+       </div>
+           <p id="perPerson">$0.00</p>
         </div>
          <div class ="total">
-       <p>
+       <div class="left">
            <h4>  Total</h4>
-           <span>  / person</span>
-        </div></p>
-        <h2></h2>
-        <button>Reset</button>
+           <span>  /person</span>
+       </div>
+            <p id="total">$0.00</p>
+        </div></div>
+     
+         <button id="reset">Reset</button>
+
+       
+        
       </div>
       
+      
     </div>
-        <h2></h2>
       </div>
      
   </div>
