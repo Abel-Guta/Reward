@@ -191,3 +191,32 @@ body{
     margin-top:-10px
 }
 
+
+
+@media screen and (width<= 375px){
+    body{
+        size:20px
+    }
+    .outer{
+        flex-direction:column;
+        height:100vh;
+        gap:40px;
+        width:90vw;
+        align-items:center;
+    }
+    .outer .calculator{
+        width:90%
+    }
+    .outer .calcresult{
+        width:90%
+
+    }
+    .outer .calculator .tip .options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    gap:10px
+}
+}
+
+
